@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Film by genre: {{ genre }}</title>
+</head>
+<body>
+    {% for p in page %}
+        <div>
+            <a href="https://ru.wikipedia.org/wiki/{{ p.title }}"><h1>{{ p.title }}</h1></a>
+            <h3>
+                <ul>
+                    <li>Описание: {{ p.description }}</li>
+                </ul>
+            </h3>
+        </div>
+    {% endfor %}
+</body>
+</html>
